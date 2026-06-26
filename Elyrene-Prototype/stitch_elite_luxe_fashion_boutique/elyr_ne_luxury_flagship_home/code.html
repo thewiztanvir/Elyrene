@@ -1,0 +1,493 @@
+<html class="light" lang="en"><head></head><body class="bg-ivory text-noir antialiased font-body-md overflow-x-hidden">```html
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elyrène - Quiet Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#474646",
+                        "on-secondary-fixed": "#24190e",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "outline-variant": "#c4c7c7",
+                        "surface-tint": "#5f5e5e",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#6f6051",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface-variant": "#444748",
+                        "primary-container": "#1c1b1b",
+                        "surface-container": "#eeeeee",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#e5e2e1",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#6b5c4d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "tertiary-fixed": "#ffdea4",
+                        "outline": "#747878",
+                        "secondary-fixed": "#f4dfcc",
+                        "tertiary-fixed-dim": "#e4c285",
+                        "on-primary-container": "#858383",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-container": "#9c8049",
+                        "on-secondary-fixed-variant": "#524436",
+                        "secondary-fixed-dim": "#d7c3b1",
+                        "on-tertiary-fixed": "#261900",
+                        "inverse-primary": "#c9c6c5",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-fixed-variant": "#5a4312",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#f1dcc9",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#261900",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        // Custom colors as requested
+                        "noir": "#0E0E0E",
+                        "ivory": "#FFFFFF",
+                        "gold": "#C9A96E",
+                        "mink": "#747878" // Using outline as mink
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "margin-tablet": "40px",
+                        "section-gap": "160px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Raleway", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "display-lg": ["EB Garamond", "serif"],
+                        "display-md": ["EB Garamond", "serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-md": ["Raleway", "sans-serif"],
+                        "body-lg": ["Raleway", "sans-serif"],
+                        "button": ["Raleway", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"],
+                        "cormorant": ["Cormorant Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "display-md": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "300" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+        .img-zoom-hover {
+            overflow: hidden;
+        }
+        .img-zoom-hover img {
+            transition: transform 0.8s ease;
+        }
+        .img-zoom-hover:hover img {
+            transform: scale(1.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-ivory/90 backdrop-blur-md border-b border-mink/20">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="hidden md:flex space-x-8">
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">Sarees</a>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">Bangles</a>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">Ornaments</a>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">Ethnic Wear</a>
+</div>
+<!-- Mobile Menu Icon (Hidden on md) -->
+<button class="md:hidden text-noir">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Brand Logo -->
+<div class="text-center">
+<img alt="Elyrène Logo" class="h-12 w-auto mx-auto invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZeZqNGkIe0p6SRCMUQl-73MarnUY6c9qcFQir-XreWDJLjgTDubl4CZ9WuZ52kXV34ke8aONDjV9fY3aKaZAbJlG8MdNAUE7cAZFN9tJJjOmjAwkixTG8qRUy8eYDdXEqCxTkEnX-g0uLUegeGDZEbDB8bx1V1JEqUDjN_UtYSfMDPI75O-rwSGMGmWgbDXfoKe5ZQEOH7J9KO41_68fiodP5dbhJza5-SzyI9AJgPwhhaXKWlsnmSc0YLz-OE_RY13sFQ9iqpXk" style="filter: brightness(0) saturate(100%);"/>
+<span class="sr-only">ELYRÈNE</span>
+</div>
+<!-- Trailing Icons -->
+<div class="flex space-x-6 items-center">
+<button class="text-noir hover:text-gold transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-noir hover:text-gold transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="text-noir hover:text-gold transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A striking editorial fashion photograph of a model draped in a luxurious, flowing black and gold saree. The setting is a minimalist, vast concrete studio illuminated by dramatic, high-contrast spotlighting. The aesthetic is extremely high-end, slow fashion, with deep blacks, pristine ivory, and elegant gold accents conveying a quiet luxury atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+<div class="absolute inset-0 bg-noir/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl fade-in-section">
+<h1 class="font-display-md md:font-display-lg text-display-md md:text-display-lg text-ivory mb-6 tracking-tight drop-shadow-lg">The Heritage Collection</h1>
+<p class="font-body-lg text-body-lg text-ivory/90 mb-10 max-w-xl mx-auto drop-shadow-md">A curated selection of timeless elegance, redefining modern heirloom fashion through meticulous craftsmanship.</p>
+<a class="inline-block bg-ivory text-noir font-button text-button px-8 py-4 hover:bg-gold hover:text-noir transition-colors duration-300" href="#">DISCOVER MORE</a>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+<span class="material-symbols-outlined text-ivory">arrow_downward</span>
+</div>
+</section>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Featured Collections (Bento Grid) -->
+<section class="fade-in-section mb-section-gap">
+<div class="flex justify-between items-end mb-12 border-b border-mink/20 pb-4">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-noir">Curated Elegance</h2>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir border-b border-transparent hover:border-noir pb-1 transition-all" href="#">VIEW ALL</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Feature -->
+<div class="md:col-span-8 group img-zoom-hover relative bg-surface h-[600px]">
+<img class="w-full h-full object-cover" data-alt="Close up editorial shot of highly intricate gold bangles resting on luxurious dark fabric. The lighting is soft but precise, catching the glint of the gold against a deep noir background, embodying an opulent, minimalist magazine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-noir/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-8 left-8 text-ivory opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">
+<span class="font-label-caps text-label-caps mb-2 block">SIGNATURE</span>
+<h3 class="font-headline-md text-headline-md">The Gold Bangle Set</h3>
+<a class="mt-4 inline-block border-b border-ivory font-button text-button pb-1" href="#">EXPLORE</a>
+</div>
+</div>
+<!-- Small Features -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="group img-zoom-hover relative bg-surface h-[284px]">
+<img class="w-full h-full object-cover" data-alt="A delicate, ornate gold necklace displayed on a pristine ivory minimalist bust. The scene is brightly lit with natural sunlight creating soft shadows, highlighting the fine craftsmanship in a quiet luxury gallery setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+<div class="absolute bottom-4 left-4 right-4 bg-ivory/90 backdrop-blur p-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="font-headline-md text-[24px] text-noir">Ornaments</span>
+<span class="material-symbols-outlined text-noir">arrow_forward</span>
+</div>
+</div>
+<div class="group img-zoom-hover relative bg-surface h-[284px]">
+<img class="w-full h-full object-cover" data-alt="Artistic capture of the intricately woven border of a premium silk saree. The focus is incredibly sharp on the texture, while the background falls away into a soft dark bokeh. The color palette revolves around ivory, gold, and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+<div class="absolute bottom-4 left-4 right-4 bg-ivory/90 backdrop-blur p-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="font-headline-md text-[24px] text-noir">Sarees</span>
+<span class="material-symbols-outlined text-noir">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals -->
+<section class="fade-in-section mb-section-gap">
+<div class="flex justify-between items-end mb-12 border-b border-mink/20 pb-4">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-noir">New Arrivals</h2>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir border-b border-transparent hover:border-noir pb-1 transition-all" href="#">SHOP NEW</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Midnight Silk Saree</h3>
+<p class="font-body-md text-mink">$450.00</p>
+</div>
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Heritage Gold Bangles</h3>
+<p class="font-body-md text-mink">$1,200.00</p>
+</div>
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Elysian Necklace</h3>
+<p class="font-body-md text-mink">$890.00</p>
+</div>
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Golden Weave Silk</h3>
+<p class="font-body-md text-mink">$520.00</p>
+</div>
+</div>
+</section>
+<!-- Featured Sarees -->
+<section class="fade-in-section mb-section-gap">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-1/2">
+<div class="img-zoom-hover h-[600px] w-full">
+<img alt="Sarees" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 px-4 md:px-12 text-center md:text-left">
+<span class="font-label-caps text-label-caps text-mink block mb-4">THE DRAPE</span>
+<h2 class="font-headline-lg text-headline-lg text-noir mb-6">Exquisite Sarees</h2>
+<p class="font-body-md text-body-md text-mink mb-8 max-w-md">Discover our signature collection of handwoven sarees, where centuries of tradition meet modern sophistication in every thread.</p>
+<a class="inline-block border-b border-noir font-button text-button pb-1 hover:text-gold hover:border-gold transition-colors" href="#">EXPLORE SAREES</a>
+</div>
+</div>
+</section>
+<!-- Featured Ornaments -->
+<section class="fade-in-section mb-section-gap">
+<div class="flex flex-col md:flex-row-reverse gap-gutter items-center">
+<div class="w-full md:w-1/2">
+<div class="img-zoom-hover h-[600px] w-full">
+<img alt="Ornaments" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 px-4 md:px-12 text-center md:text-left">
+<span class="font-label-caps text-label-caps text-mink block mb-4">FINE JEWELRY</span>
+<h2 class="font-headline-lg text-headline-lg text-noir mb-6">Statement Ornaments</h2>
+<p class="font-body-md text-body-md text-mink mb-8 max-w-md ml-auto md:ml-0">Meticulously crafted pieces that speak volumes in their subtlety. Adorn yourself in quiet luxury.</p>
+<a class="inline-block border-b border-noir font-button text-button pb-1 hover:text-gold hover:border-gold transition-colors" href="#">EXPLORE ORNAMENTS</a>
+</div>
+</div>
+</section>
+<!-- Featured Bangles -->
+<section class="fade-in-section mb-section-gap">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-1/2">
+<div class="img-zoom-hover h-[600px] w-full">
+<img alt="Bangles" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 px-4 md:px-12 text-center md:text-left">
+<span class="font-label-caps text-label-caps text-mink block mb-4">THE WRIST</span>
+<h2 class="font-headline-lg text-headline-lg text-noir mb-6">Sculpted Bangles</h2>
+<p class="font-body-md text-body-md text-mink mb-8 max-w-md">Solid gold, intricate detailing, and timeless silhouettes designed for the modern connoisseur.</p>
+<a class="inline-block border-b border-noir font-button text-button pb-1 hover:text-gold hover:border-gold transition-colors" href="#">EXPLORE BANGLES</a>
+</div>
+</div>
+</section>
+<!-- Seasonal Collections -->
+<section class="fade-in-section mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="group cursor-pointer relative h-[700px] img-zoom-hover">
+<img alt="Autumn" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+<div class="absolute inset-0 bg-noir/20 transition-colors duration-300 group-hover:bg-noir/40"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+<h3 class="font-headline-lg text-ivory mb-4 drop-shadow-md">Autumn Aura</h3>
+<a class="inline-block border-b border-ivory text-ivory font-button text-button pb-1" href="#">DISCOVER</a>
+</div>
+</div>
+<div class="group cursor-pointer relative h-[700px] img-zoom-hover">
+<img alt="Winter" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+<div class="absolute inset-0 bg-noir/20 transition-colors duration-300 group-hover:bg-noir/40"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+<h3 class="font-headline-lg text-ivory mb-4 drop-shadow-md">Winter Gala</h3>
+<a class="inline-block border-b border-ivory text-ivory font-button text-button pb-1" href="#">DISCOVER</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers -->
+<section class="fade-in-section mb-section-gap">
+<div class="flex justify-between items-end mb-12 border-b border-mink/20 pb-4">
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-noir">Best Sellers</h2>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir border-b border-transparent hover:border-noir pb-1 transition-all" href="#">SHOP ALL</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Classic Chain</h3>
+<p class="font-body-md text-mink">$340.00</p>
+</div>
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Ivory &amp; Gold Saree</h3>
+<p class="font-body-md text-mink">$680.00</p>
+</div>
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Engraved Bangle</h3>
+<p class="font-body-md text-mink">$950.00</p>
+</div>
+<div class="group cursor-pointer">
+<div class="img-zoom-hover h-[400px] mb-4 bg-surface">
+<img alt="Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+</div>
+<h3 class="font-body-lg text-noir mb-1">Onyx Drape</h3>
+<p class="font-body-md text-mink">$590.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Limited Edition Collection -->
+<section class="bg-noir py-24 mb-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-5/12 text-center md:text-left mb-12 md:mb-0 fade-in-section">
+<span class="font-label-caps text-label-caps text-gold block mb-6">EXCLUSIVE ARCHIVE</span>
+<h2 class="font-headline-lg text-[40px] md:text-[56px] text-ivory mb-8 leading-tight">The Imperial Vault</h2>
+<p class="font-body-md text-body-md text-mink mb-10 max-w-md mx-auto md:mx-0">A highly restricted collection of one-of-a-kind heritage pieces, available only to our most discerning clientele. Once acquired, they are never replicated.</p>
+<a class="inline-block bg-gold text-noir font-button text-button px-8 py-4 hover:bg-ivory transition-colors duration-300" href="#">REQUEST ACCESS</a>
+</div>
+<div class="w-full md:w-7/12 fade-in-section">
+<div class="h-[500px] md:h-[700px] w-full img-zoom-hover">
+<img alt="Limited Edition Vault" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Brand Story (Typography Focus) -->
+<section class="fade-in-section mb-section-gap py-24 bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto text-center px-4">
+<span class="font-label-caps text-label-caps text-mink block mb-6">OUR PHILOSOPHY</span>
+<h2 class="font-cormorant text-[40px] md:text-[56px] leading-tight text-noir mb-8 italic">"True luxury is found in the whisper of fine silk and the weight of sculpted gold, not in the shout of the passing trend."</h2>
+<p class="font-body-md text-body-md text-mink max-w-xl mx-auto mb-10">Elyrène was born from a desire to preserve heritage artistry within a modern, minimalist context. Every piece is a testament to slow fashion, designed to be passed down through generations.</p>
+<img alt="Elyrène Signet" class="h-16 w-auto mx-auto opacity-50 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZeZqNGkIe0p6SRCMUQl-73MarnUY6c9qcFQir-XreWDJLjgTDubl4CZ9WuZ52kXV34ke8aONDjV9fY3aKaZAbJlG8MdNAUE7cAZFN9tJJjOmjAwkixTG8qRUy8eYDdXEqCxTkEnX-g0uLUegeGDZEbDB8bx1V1JEqUDjN_UtYSfMDPI75O-rwSGMGmWgbDXfoKe5ZQEOH7J9KO41_68fiodP5dbhJza5-SzyI9AJgPwhhaXKWlsnmSc0YLz-OE_RY13sFQ9iqpXk" style="filter: brightness(0);"/>
+</div>
+</section>
+<!-- Customer Testimonials -->
+<section class="fade-in-section mb-section-gap">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-noir">Words from our Clientele</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center px-4">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">format_quote</span>
+<p class="font-body-lg text-noir italic mb-6">"The craftsmanship of the gold bangles is unparalleled. They possess a weight and finish that speaks to true artisan luxury. A lifetime investment."</p>
+<span class="font-label-caps text-label-caps text-mink">- E. Rostova</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">format_quote</span>
+<p class="font-body-lg text-noir italic mb-6">"Draping an Elyrène saree feels like wearing poetry. The silk is unimaginably fluid, yet carries the rich heritage of its weavers so proudly."</p>
+<span class="font-label-caps text-label-caps text-mink">- M. Kapoor</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">format_quote</span>
+<p class="font-body-lg text-noir italic mb-6">"Quiet luxury defined. The pieces I've collected over the years are consistently the most complimented items in my wardrobe."</p>
+<span class="font-label-caps text-label-caps text-mink">- S. Laurent</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Instagram Feed -->
+<section class="mb-section-gap fade-in-section">
+<div class="text-center mb-12">
+<a class="font-label-caps text-label-caps text-noir hover:text-gold transition-colors" href="#">@ELYRENE.OFFICIAL</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 w-full">
+<div class="aspect-square bg-surface group relative overflow-hidden">
+<img alt="Social post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface group relative overflow-hidden">
+<img alt="Social post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface group relative overflow-hidden">
+<img alt="Social post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface group relative overflow-hidden">
+<img alt="Social post" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Signup -->
+<section class="py-24 bg-surface fade-in-section mb-section-gap">
+<div class="max-w-2xl mx-auto px-4 text-center">
+<h2 class="font-headline-md text-headline-md text-noir mb-4">Join the Inner Circle</h2>
+<p class="font-body-md text-mink mb-8">Subscribe to receive exclusive access to limited collections, private events, and editorial insights.</p>
+<form class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+<input class="flex-grow bg-transparent border-b border-mink/50 focus:border-noir focus:ring-0 px-0 py-3 font-body-md text-noir placeholder-mink/50 transition-colors" placeholder="Your email address" required="" type="email"/>
+<button class="font-button text-button text-noir border-b border-noir pb-1 hover:text-gold hover:border-gold transition-all shrink-0 uppercase tracking-widest mt-4 sm:mt-0 self-center sm:self-end" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-noir text-ivory py-section-gap border-t border-mink/20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-4 mb-10 md:mb-0">
+<img alt="Elyrène Logo" class="h-16 w-auto mb-8 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZeZqNGkIe0p6SRCMUQl-73MarnUY6c9qcFQir-XreWDJLjgTDubl4CZ9WuZ52kXV34ke8aONDjV9fY3aKaZAbJlG8MdNAUE7cAZFN9tJJjOmjAwkixTG8qRUy8eYDdXEqCxTkEnX-g0uLUegeGDZEbDB8bx1V1JEqUDjN_UtYSfMDPI75O-rwSGMGmWgbDXfoKe5ZQEOH7J9KO41_68fiodP5dbhJza5-SzyI9AJgPwhhaXKWlsnmSc0YLz-OE_RY13sFQ9iqpXk"/>
+<p class="font-body-md text-body-md text-mink max-w-sm mb-6">Elevating traditional craftsmanship into the realm of modern, quiet luxury.</p>
+<div class="flex space-x-4">
+<a class="text-ivory hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-ivory hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="md:col-span-2 md:col-start-7 mb-8 md:mb-0">
+<h4 class="font-label-caps text-label-caps mb-6 text-mink">EXPLORE</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="hover:text-gold transition-colors" href="#">Sarees</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Bangles</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Ornaments</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Ethnic Wear</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 mb-8 md:mb-0">
+<h4 class="font-label-caps text-label-caps mb-6 text-mink">ELYRÈNE</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="hover:text-gold transition-colors" href="#">Brand Story</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Craftsmanship</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-label-caps mb-6 text-mink">LEGAL</h4>
+</div></div></footer></body></html>

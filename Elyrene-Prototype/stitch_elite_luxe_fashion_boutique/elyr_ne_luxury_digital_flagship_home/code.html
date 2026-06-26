@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ELYRÈNE - Quiet Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "surface-dim": "#dadada",
+                            "primary-fixed-dim": "#c9c6c5",
+                            "on-secondary-container": "#6f6051",
+                            "error-container": "#ffdad6",
+                            "on-tertiary-container": "#9c8049",
+                            "tertiary": "#000000",
+                            "surface-container-lowest": "#ffffff",
+                            "surface": "#ffffff", /* Ivory override */
+                            "on-primary-container": "#858383",
+                            "surface-container": "#eeeeee",
+                            "tertiary-fixed": "#ffdea4",
+                            "on-secondary-fixed-variant": "#524436",
+                            "on-primary-fixed": "#1c1b1b",
+                            "error": "#ba1a1a",
+                            "tertiary-container": "#261900",
+                            "on-secondary": "#ffffff",
+                            "inverse-primary": "#c9c6c5",
+                            "surface-tint": "#5f5e5e",
+                            "primary": "#0e0e0e", /* Noir override */
+                            "on-surface-variant": "#444748",
+                            "background": "#ffffff", /* Ivory override */
+                            "primary-container": "#1c1b1b",
+                            "on-primary-fixed-variant": "#474646",
+                            "secondary-fixed-dim": "#d7c3b1",
+                            "on-background": "#0e0e0e", /* Noir override */
+                            "on-error-container": "#93000a",
+                            "surface-container-low": "#f3f3f4",
+                            "outline": "#747878",
+                            "on-error": "#ffffff",
+                            "surface-container-high": "#e8e8e8",
+                            "tertiary-fixed-dim": "#c9a96e", /* Gold override */
+                            "on-tertiary-fixed-variant": "#5a4312",
+                            "secondary-container": "#f1dcc9",
+                            "on-tertiary": "#ffffff",
+                            "on-secondary-fixed": "#24190e",
+                            "inverse-surface": "#2f3131",
+                            "surface-variant": "#e2e2e2",
+                            "surface-bright": "#ffffff",
+                            "on-primary": "#ffffff",
+                            "secondary-fixed": "#f4dfcc",
+                            "inverse-on-surface": "#f0f1f1",
+                            "primary-fixed": "#e5e2e1",
+                            "secondary": "#c9a96e", /* Gold override */
+                            "on-surface": "#0e0e0e", /* Noir override */
+                            "on-tertiary-fixed": "#261900",
+                            "surface-container-highest": "#e2e2e2",
+                            "outline-variant": "#c4c7c7" /* Mink approximation */
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0", /* Sharp corners for luxury feel */
+                            "lg": "0",
+                            "xl": "0",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "margin-tablet": "40px",
+                            "gutter": "32px",
+                            "margin-mobile": "20px",
+                            "section-gap": "160px",
+                            "margin-desktop": "80px",
+                            "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                            "body-md": ["Raleway", "sans-serif"],
+                            "headline-md": ["Cormorant Garamond", "serif"],
+                            "display-lg": ["Cormorant Garamond", "serif"],
+                            "headline-lg": ["Cormorant Garamond", "serif"],
+                            "label-caps": ["Raleway", "sans-serif"],
+                            "button": ["Raleway", "sans-serif"],
+                            "body-lg": ["Raleway", "sans-serif"],
+                            "headline-lg-mobile": ["Cormorant Garamond", "serif"],
+                            "display-md": ["Cormorant Garamond", "serif"]
+                    },
+                    "fontSize": {
+                            "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "300"}],
+                            "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                            "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "300"}],
+                            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                            "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                            "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                            "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "300"}],
+                            "display-md": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "300"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Base styles to enforce the luxury feel */
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Minimalist scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: theme('colors.outline-variant'); }
+        ::-webkit-scrollbar-thumb:hover { background: theme('colors.primary'); }
+
+        /* Emulate ebGaramond with Cormorant Garamond for the prompt requirements while keeping config names */
+        .font-headline-md, .font-display-lg, .font-headline-lg, .font-headline-lg-mobile, .font-display-md {
+            font-family: 'Cormorant Garamond', serif !important;
+        }
+
+        /* Image hover effects */
+        .image-zoom-container { overflow: hidden; }
+        .image-zoom-container img { transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .image-zoom-container:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-tertiary-fixed-dim selection:text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary/90 backdrop-blur-md border-b border-outline-variant dark:border-primary-fixed-variant transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<!-- Mobile Menu Button (Left) -->
+<button aria-label="Open Menu" class="md:hidden text-primary flex items-center justify-center p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<!-- Navigation Links (Desktop Left) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-tertiary-fixed-dim border-b border-tertiary-fixed-dim pb-1 hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Sarees</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-on-primary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Bangles</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-on-primary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Ornaments</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-on-primary hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">Ethnic Wear</a>
+</nav>
+<!-- Brand Logo (Center) -->
+<a class="font-display-md text-display-md tracking-tighter text-primary dark:text-on-primary absolute left-1/2 -translate-x-1/2" href="#">
+                ELYRÈNE
+            </a>
+<!-- Trailing Icons (Right) -->
+<div class="flex items-center space-x-4 md:space-x-6">
+<button aria-label="shopping_bag" class="text-primary hover:text-tertiary-fixed-dim transition-colors duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+<button aria-label="person" class="hidden md:flex text-primary hover:text-tertiary-fixed-dim transition-colors duration-300 items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-[100px]"> <!-- Offset for fixed header -->
+<!-- 1. Full-screen Hero Banner -->
+<section class="relative h-[870px] w-full flex items-center justify-center bg-surface overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Image" class="w-full h-full object-cover object-top opacity-30" data-alt="A minimalist, high-fashion editorial shot of an elegant woman wearing a sheer, beautifully draped ivory sari. She stands in a vast, sunlit minimalist gallery space with stark white walls and dramatic shadows. The lighting is high-key and serene. The overall aesthetic is quiet luxury, utilizing a strict noir and ivory palette with a sense of timeless elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyAtSj9GoTbmbtABsaQm_gbWPSYb1Abx5eNSpuCgSCxGMJBLalLCBr6E_lkYy0xr0DumqsGxDQlVs7zl0T3iMbky0fwaR7hLtT1-rD8MqF5MmgA64DNEbyTWzHpEwoFmslM-rlcZvUTGRHlMm6_gx8rqgnD3jhtxggAoE8Pk8Hk0b2T1y-G-oPswQyKa0sk_9t_Q-VCbBC8rfCTtKT4MvOdhVWDmD-FGldobQaXeoCdm1QV64mjlIrhEB1BEmWKCk7mFdUG3LWor4"/>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">The Art of Elegance</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">Discover our curated collection of timeless heritage pieces, designed for the modern connoisseur of quiet luxury.</p>
+<a class="inline-block bg-primary text-on-primary font-button text-button px-8 py-4 uppercase tracking-[0.1em] hover:bg-tertiary-fixed-dim hover:text-primary transition-colors duration-300" href="#">
+                    Explore Collection
+                </a>
+</div>
+</section>
+<!-- 2. Featured Collections (Heritage, Bridal) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary">Featured Collections</h2>
+<div class="w-12 h-[1px] bg-outline-variant mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Heritage -->
+<a class="group block relative h-[716px] image-zoom-container" href="#">
+<img alt="Heritage Collection" class="w-full h-full object-cover" data-alt="A close-up, highly detailed shot of intricate gold filigree jewelry resting on a piece of dark, textured noir fabric. The lighting is moody and directional, highlighting the craftsmanship and the gold accents against the deep black background. The mood is historic, valuable, and indicative of high-end heritage craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBojbW00_CZ8Tdoa_FP2eg-DF8XwDI-h5-vnefe5XQwa2I6cZLeqQp06MaOZHRYjomRLl7uaYENI5UoygnrygYBpeD9uIUo0OzfbPNcSVrX7TvHF7krqDWjYpOLJ4ln_m1OrQ_wiLlkvK-TIJoO7lQfYYPX7U1j7RPdf7uLFw56-WcV0cwWcdxkfqpVr4Glyt1QGEtaOogulmTA7hlh7xTjBnhYYyPHCbDflvlsKVMBzf7Um3YXdrZnjM8VaKfbx2h1WSzV9aM8sf0"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-500"></div>
+<div class="absolute bottom-10 left-10 text-on-primary">
+<span class="font-label-caps text-label-caps block mb-2 opacity-80">Collection</span>
+<h3 class="font-headline-md text-headline-md">Heritage</h3>
+</div>
+</a>
+<!-- Bridal -->
+<a class="group block relative h-[716px] image-zoom-container" href="#">
+<img alt="Bridal Collection" class="w-full h-full object-cover" data-alt="An ethereal bridal portrait featuring a woman in a heavily embroidered ivory lehenga with subtle gold detailing. She is photographed against a minimalist, softly lit beige background. The overall tone is soft, romantic, and luxurious, emphasizing the delicate textures and the quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8yqvT7P8I2rMrZ7zdyyV7Jd_odPIIu0bcPrswAujgy0Wso58CHCtSdSQnbS65235ycljK79sb4aq9WNxMb2vBORSljOHqrLjOiTr9Vbg-e9Hmiopc-cw5oEJw_JzJv5uhMGUcXHJ5IlsgPCsb3pwX7St1bGHpFDn-NSrfBA_VVmJnojPpFz0_6WzurgecC-P9qlVN-GtsrxQ6nTVqGdAiEYxn2BwT6xTXAjYHdb0E6iXU8HdDzQw3KTTqjBI90ukcVONKqWP_7dw"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-500"></div>
+<div class="absolute bottom-10 left-10 text-on-primary">
+<span class="font-label-caps text-label-caps block mb-2 opacity-80">Collection</span>
+<h3 class="font-headline-md text-headline-md">Bridal</h3>
+</div>
+</a>
+</div>
+</section>
+<!-- 3. New Arrivals grid -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">New Arrivals</h2>
+</div>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-tertiary-fixed-dim hover:border-tertiary-fixed-dim transition-all duration-300" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] mb-6 image-zoom-container bg-surface">
+<img alt="Product 1" class="w-full h-full object-cover" data-alt="A minimalist flat lay of a delicate gold necklace with a single diamond pendant resting on a pristine ivory marble surface. Subtle, soft natural lighting casts gentle shadows. The composition is clean, highly structured, and reflects a high-end, quiet luxury magazine editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvTIaEtVOpGBzSOiAvUl8a2zpNSxzPApgmua57de1y3-pUytYyS8CxJHjRjC_Wl0aHSFGQA8e7gTezd_jzV-J0_lTf62Z-SPiNlSlTYtiFy49GdNheFyxi7e_CiqokSuj1AL1cRoR0jdXFIbAXSMWMfopml8A3GlRWevLQQEjlTd2LayrONhk81QGbziZIf8rZ8UAjXOraMq0YcMlM6y4Hst7R1PekFgYgOiA_cu5ehW4kFA6FS0JTyW6mcRrDtzQgt5f7N1r7hZ0"/>
+<div class="absolute inset-0 border border-transparent group-hover:border-tertiary-fixed-dim transition-colors duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<h4 class="font-body-md text-body-md text-primary mb-1">Aurelia Pendant</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">$1,250</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] mb-6 image-zoom-container bg-surface">
+<img alt="Product 2" class="w-full h-full object-cover" data-alt="A model's wrist wearing an intricately carved solid gold bangle, photographed against a stark black background. The lighting is dramatic and focused entirely on the jewelry, highlighting the craftsmanship and the reflective quality of the gold. The image exudes exclusivity and timeless elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4rt0uLf0f7ibDqfI-5lAN1MmrM38vk2kGtZS0EckQNwsm-FfXXmRR3jGLo04_HB7POXabx1Hv2SqzdyHMpkYVw01udEirtDyexlLcWrugmhbE7TdgdhssAXJHGAwrDJ7p-TSugObyxUTtXpcqqmra-iub8sFUHB6RXpclui5a0gslNHM3C-OqaY83aGWdoa2W8hkxDcRGfgH_-Us_loSJ42vDcVjA4FiZ-03uuATab5LkxWThqBJDTttyxLYNV_kqzQJV1dlEUjQ"/>
+<div class="absolute inset-0 border border-transparent group-hover:border-tertiary-fixed-dim transition-colors duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<h4 class="font-body-md text-body-md text-primary mb-1">Empress Bangle</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">$2,800</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] mb-6 image-zoom-container bg-surface">
+<img alt="Product 3" class="w-full h-full object-cover" data-alt="A folded piece of luxurious, heavy silk fabric in deep ivory with subtle metallic gold threads woven through it. Photographed in macro detail to show the texture. The lighting is soft and even. The aesthetic is tactile, minimalist, and deeply focused on material quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATnheSo8qfgjDLqzb-OZr3NX3buqPsg2RKKMu8IG05jIIGdag9ojqE040CCmKwNOVJZV3eHPnI-mdzv--3LB2B7nBRbJscSkvW6A3xbo3YSv1thEtFmX5GVOhvDQLR_M9LES2X2sDowI9SbO5kpJBfDowxjuLEKEppdRCAdivLwT8NyNVIUf50L9UsotpGc0UIyFzwBk0c3otdMBSQAJd0eQaJgIXA0qYVJ-VoxrDnChQkq8yYdCrHFPH6wY-7NuUWKScje_7bMbw"/>
+<div class="absolute inset-0 border border-transparent group-hover:border-tertiary-fixed-dim transition-colors duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<h4 class="font-body-md text-body-md text-primary mb-1">Silk Organza Saree</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">$950</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="relative w-full aspect-[3/4] mb-6 image-zoom-container bg-surface">
+<img alt="Product 4" class="w-full h-full object-cover" data-alt="A pair of elegant chandelier earrings featuring small pearls and gold accents, displayed hanging over a minimalist noir display stand. The background is a soft, out-of-focus ivory studio setting. The image is crisp, editorial, and conveys a sense of refined taste and luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCUu6OosdCSeojSayyHT0Vb1qXshLlcP7v8L5qpRmI-enQ7Zs3lAO0nIOe3EiWWy8pAa_DkOICnqtOb0mtfhXXEBADeB5Zo81STS4StAfvna_93r9oSvC5KM6YhlFIyq3qTJI6CpY6Q2jkqhAGRFsCMJMmfvcDKGEcmZgB4XrxEUzg9w2TmvNJnKKgTvD9796nhT_VAGEXtB0rCHxhINfAxWIxPvAMTVTmhtZm41XucerpA8GVVbPj1veJAO2hWceVFX-kBv-kuDM"/>
+<div class="absolute inset-0 border border-transparent group-hover:border-tertiary-fixed-dim transition-colors duration-300 pointer-events-none"></div>
+</div>
+<div class="text-center">
+<h4 class="font-body-md text-body-md text-primary mb-1">Lumina Earrings</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">$1,850</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Brand Story Excerpt -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mb-8" style="font-size: 32px; font-variation-settings: 'FILL' 0;">diamond</span>
+<blockquote class="font-headline-md text-headline-md italic text-primary max-w-4xl mx-auto leading-relaxed">
+                "True luxury is not loud. It is the quiet confidence of impeccable craftsmanship, the whisper of silk, and the timeless weight of heritage."
+            </blockquote>
+<p class="mt-8 font-label-caps text-label-caps text-on-surface-variant tracking-widest">ELYRÈNE ATELIER</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-primary border-t border-outline-variant w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="col-span-1 md:col-span-1 flex flex-col">
+<a class="font-display-md text-display-md text-primary dark:text-on-primary mb-6" href="#">
+                    ELYRÈNE
+                </a>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-xs">
+                    Curating timeless elegance and heritage craftsmanship for the modern connoisseur.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Our Story</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Craftsmanship</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Service</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Boutique Finder</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Newsletter (11) -->
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-primary mb-6">Newsletter</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Subscribe for exclusive access to new collections and editorial insights.</p>
+<form class="flex flex-col space-y-4">
+<input class="bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-tertiary-fixed-dim px-0 py-2 font-body-md text-primary placeholder-on-surface-variant transition-colors duration-300" placeholder="Email Address" type="email"/>
+<button class="self-start font-button text-button text-primary hover:text-tertiary-fixed-dim tracking-widest transition-colors duration-300" type="submit">SUBSCRIBE</button>
+</form>
+</div>
+</div>
+<!-- Copyright -->
+<div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant max-w-container-max mx-auto flex justify-between items-center">
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2024 ELYRÈNE. ALL RIGHTS RESERVED.</p>
+<div class="flex space-x-4 text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">IG</a>
+<a class="hover:text-primary transition-colors" href="#">PT</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elyrène Admin - Product Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-secondary-container": "#6f6051",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#9c8049",
+                        "tertiary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "on-primary-container": "#858383",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffdea4",
+                        "on-secondary-fixed-variant": "#524436",
+                        "on-primary-fixed": "#1c1b1b",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#261900",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#c9c6c5",
+                        "surface-tint": "#5f5e5e",
+                        "primary": "#000000",
+                        "on-surface-variant": "#444748",
+                        "background": "#f9f9f9",
+                        "primary-container": "#1c1b1b",
+                        "on-primary-fixed-variant": "#474646",
+                        "secondary-fixed-dim": "#d7c3b1",
+                        "on-background": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f3f4",
+                        "outline": "#747878",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed-dim": "#e4c285",
+                        "on-tertiary-fixed-variant": "#5a4312",
+                        "secondary-container": "#f1dcc9",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#24190e",
+                        "inverse-surface": "#2f3131",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#f4dfcc",
+                        "inverse-on-surface": "#f0f1f1",
+                        "primary-fixed": "#e5e2e1",
+                        "secondary": "#6b5c4d",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed": "#261900",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline-variant": "#c4c7c7",
+                        
+                        "mink": "#747878",
+                        "noir": "#000000",
+                        "ivory": "#ffffff",
+                        "gold": "#e4c285"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "section-gap": "160px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["raleway"],
+                        "headline-md": ["ebGaramond"],
+                        "display-lg": ["ebGaramond"],
+                        "headline-lg": ["ebGaramond"],
+                        "label-caps": ["raleway"],
+                        "button": ["raleway"],
+                        "body-lg": ["raleway"],
+                        "headline-lg-mobile": ["ebGaramond"],
+                        "display-md": ["ebGaramond"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "300" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "display-md": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "300" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f9f9f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dadada;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c4c7c7;
+        }
+        input:focus, select:focus, textarea:focus {
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body class="bg-surface text-primary min-h-screen flex antialiased">
+<!-- Sidebar Navigation -->
+<aside class="w-64 bg-surface-container-lowest border-r border-mink/20 flex flex-col hidden md:flex sticky top-0 h-screen shrink-0">
+<div class="p-8 border-b border-mink/20">
+<h1 class="font-display-md text-display-md tracking-tighter text-primary">ELYRÈNE</h1>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mt-2">Atelier Dashboard</span>
+</div>
+<nav class="flex-1 py-8 px-4 flex flex-col gap-2 overflow-y-auto">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-button text-button">Overview</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-primary bg-surface-container-low rounded-DEFAULT border-l-2 border-primary" href="#">
+<span class="material-symbols-outlined filled-icon">inventory_2</span>
+<span class="font-button text-button">Products</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-button text-button">Orders</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-button text-button">Clients</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-button text-button">Analytics</span>
+</a>
+</nav>
+<div class="p-8 border-t border-mink/20">
+<a class="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-button text-button">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0">
+<!-- Top Bar -->
+<header class="h-24 bg-surface-container-lowest border-b border-mink/20 px-margin-tablet lg:px-margin-desktop flex items-center justify-between sticky top-0 z-10 shrink-0">
+<div class="flex items-center gap-4 md:hidden">
+<button class="text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-md text-3xl tracking-tighter text-primary">ELYRÈNE</h1>
+</div>
+<div class="hidden md:block">
+<h2 class="font-headline-md text-headline-md text-primary">Product Catalogue</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage inventory, pricing, and collections.</p>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-primary hover:text-mink transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-gold rounded-full"></span>
+</button>
+<div class="flex items-center gap-3 pl-6 border-l border-mink/20">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a sophisticated woman with dark hair pulled back, wearing a tailored black blazer over a crisp white silk blouse, positioned against a minimalist grey studio background. The lighting is soft and flattering, creating a high-end, editorial portrait aesthetic suitable for a luxury brand administrator." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSRvFmBQiVaqsJO6NNQifj0pbr8sc7S_-su8A3NhKLStCkk73ZnsnA7aE07ksyYE8MqHfYaqE_b32WiK8OFAJ-uMHenom_C0dmm5RyjMItSaFQBi_IMFkdQRQGmwI7fj60gdxX3TdfTMZ_w16XCZVTP7M_WOcVDaApNkaTnrdJ8eJ60io5ODPanNUw67LmD1UzzoHVbZsa1WQtldXY6jQA8Rqb-UT4Sj42F0OsBLg9v_-elJNPO1L4VLfhJM8myvved_rNWsR6ALQ"/>
+</div>
+<div class="hidden lg:block">
+<p class="font-button text-button text-primary">A. Laurent</p>
+<p class="font-label-caps text-[10px] text-mink">Curator</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="flex-1 p-margin-tablet lg:p-margin-desktop overflow-y-auto">
+<!-- Actions Bar -->
+<div class="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6 mb-12">
+<!-- Search & Filters -->
+<div class="flex flex-wrap items-center gap-4 w-full xl:w-auto">
+<div class="relative w-full md:w-80 border-b border-mink focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-mink">search</span>
+<input class="w-full bg-transparent border-none py-3 pl-8 pr-4 font-body-md text-body-md text-primary placeholder:text-mink focus:ring-0" placeholder="Search by SKU, Name..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<select class="appearance-none bg-transparent border-b border-mink py-3 pr-8 pl-2 font-body-md text-body-md text-primary focus:ring-0 focus:border-primary cursor-pointer transition-colors min-w-[140px]">
+<option value="">All Categories</option>
+<option value="sarees">Sarees</option>
+<option value="bangles">Bangles</option>
+<option value="ornaments">Ornaments</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-mink pointer-events-none group-focus-within:text-primary transition-colors">arrow_drop_down</span>
+</div>
+<div class="relative group">
+<select class="appearance-none bg-transparent border-b border-mink py-3 pr-8 pl-2 font-body-md text-body-md text-primary focus:ring-0 focus:border-primary cursor-pointer transition-colors min-w-[120px]">
+<option value="">All Status</option>
+<option value="active">Active</option>
+<option value="draft">Draft</option>
+<option value="archived">Archived</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-mink pointer-events-none group-focus-within:text-primary transition-colors">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Primary Actions -->
+<div class="flex items-center gap-4 w-full xl:w-auto shrink-0">
+<button class="px-6 py-3 border border-primary text-primary font-button text-button hover:bg-surface-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">upload</span>
+                        Bulk Upload
+                    </button>
+<button class="px-6 py-3 bg-primary text-on-primary font-button text-button hover:bg-gold hover:text-primary transition-colors flex items-center gap-2 border border-primary">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                        Create New
+                    </button>
+</div>
+</div>
+<!-- Product Table -->
+<div class="bg-surface-container-lowest overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-mink/40">
+<th class="py-4 pl-6 pr-4 font-label-caps text-label-caps text-mink uppercase w-12">
+<input class="border-mink text-primary focus:ring-primary rounded-sm bg-transparent w-4 h-4 cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-mink uppercase">Product</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-mink uppercase">SKU</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-mink uppercase">Category</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-mink uppercase">Inventory</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-mink uppercase">Price</th>
+<th class="py-4 px-4 font-label-caps text-label-caps text-mink uppercase text-right pr-6">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-mink/20">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 pl-6 pr-4 align-middle">
+<input class="border-mink text-primary focus:ring-primary rounded-sm bg-transparent w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-4">
+<div class="w-16 h-20 bg-surface-container overflow-hidden shrink-0">
+<img alt="Silk Saree" class="w-full h-full object-cover" data-alt="A close-up studio shot of heavily textured, shimmering gold and deep emerald green silk fabric draped elegantly to show its weave. The lighting is dramatic and directional, highlighting the metallic threads and luxurious sheen of the material against a very dark, moody background, conveying high-end fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYgWOBdUWnJsauLPgDHjsIlTYNwjGegSt5wG_6scOIEMW-LgVzQs2yS1NpFdAWV-UwgA7fznW4ZSyI2cySP6TNUYxkEzFVh1C_wW01hnFTofLDv2vN25KIsLfnvWZ_Ica6tRVl-NB47NLcZZ4AMOV4Ze_y3Pk6djyQVnaq9uOrSiZHqY71nOEnXGfB7JIeRwDKkTaEHnGyFOWEhXIGGopOMnq8BjC7VRPqxiJQyqFZrwaqFR0G-7AIAPN19MT1HNmGWHxJjEf1NU4"/>
+</div>
+<div>
+<p class="font-headline-md text-[20px] leading-tight text-primary">Kanjeevaram Silk Saree</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">Emerald &amp; Gold Zari</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-on-surface-variant">EL-SR-0492</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-primary">Sarees</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-primary">42</span>
+</div>
+</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-primary">$1,250</td>
+<td class="py-4 px-4 align-middle text-right pr-6">
+<div class="flex justify-end items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-mink hover:text-primary transition-colors" title="View">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-2 text-mink hover:text-primary transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-mink hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 (Low Stock) -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 pl-6 pr-4 align-middle">
+<input class="border-mink text-primary focus:ring-primary rounded-sm bg-transparent w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-4">
+<div class="w-16 h-20 bg-surface-container overflow-hidden shrink-0">
+<img alt="Gold Bangles" class="w-full h-full object-cover" data-alt="A minimalist editorial product photograph of three delicate, solid gold bangles resting on a pristine white marble block. The composition uses abundant negative space. The lighting is soft and diffused, creating subtle shadows that emphasize the cylindrical form and polished surface of the jewelry, presenting a modern luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDCueKu26Ivi8R_0NsJTuK7JPRvu_PI2tuOVLO5xJ6yGvhnxfLqR-jkjIv-Cm8BWRXkPnkbFfq9VR0TvVJLEecUPS4nXgfkhbdAj_pKhQKiAAs9W2jh1KhEHgsKOuy0B7BMbjcGrgD4CWlMLCYk04oUTqQ-_bvrdvIAtLOQToYzmJetLVmP93EEz4hmAJAZVCuEnRXuDvfwgAlD56BX1Y1TUNSHPW6xR1usEgu7bkC697jGsdSATG2pBluyTfnRfPK_7nXU-Y-VdQ"/>
+</div>
+<div>
+<p class="font-headline-md text-[20px] leading-tight text-primary">Heritage Temple Bangles</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">22k Gold, Ruby Accents</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-on-surface-variant">EL-BG-1108</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-primary">Bangles</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-tertiary-fixed-dim font-medium">3</span>
+<span class="font-label-caps text-[10px] bg-tertiary-fixed-dim/10 text-tertiary-fixed-dim px-2 py-1 rounded-sm border border-tertiary-fixed-dim/20">Low Stock</span>
+</div>
+</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-primary">$3,400</td>
+<td class="py-4 px-4 align-middle text-right pr-6">
+<div class="flex justify-end items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-mink hover:text-primary transition-colors" title="View">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-2 text-mink hover:text-primary transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-mink hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 pl-6 pr-4 align-middle">
+<input class="border-mink text-primary focus:ring-primary rounded-sm bg-transparent w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-4">
+<div class="w-16 h-20 bg-surface-container overflow-hidden shrink-0">
+<img alt="Polki Necklace" class="w-full h-full object-cover" data-alt="A high-fashion still life of a heavy, ornate Polki diamond and pearl necklace draped over a textured charcoal-grey stone plinth. The lighting is very controlled, spotlighting the facets of the uncut diamonds and the luster of the pearls against the dark, moody background, establishing an aura of extreme exclusivity and heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALoNcvcojDF1C0IWmx35GU9YqV_IRgik2YWXY8eh7-0GaMVyc8e3m6Q6Q8mEHMfbaN39qNkJuuLt2OA6hlG3tak2hXuFj3czJGTaxmWykCMEtIudl2cQhFJC3nowqWtTXi_icgJmGxlCoDFjgGnQIGDheIsWtx59yEPTlP2C_LHAPno4k9T245Wv19W04l8LYvSCzJTrOhqabiuZ2so8Q74rTqeGhO6mxzd7DljYSv2WaLIA7DW2kQmHNq_gs2Zwufvh3lHwV4prY"/>
+</div>
+<div>
+<p class="font-headline-md text-[20px] leading-tight text-primary">Nizam Polki Choker</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1">Uncut Diamonds, Basra Pearls</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-on-surface-variant">EL-OR-9021</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-primary">Ornaments</td>
+<td class="py-4 px-4 align-middle">
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md text-primary">12</span>
+</div>
+</td>
+<td class="py-4 px-4 align-middle font-body-md text-body-md text-primary">$18,500</td>
+<td class="py-4 px-4 align-middle text-right pr-6">
+<div class="flex justify-end items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 text-mink hover:text-primary transition-colors" title="View">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="p-2 text-mink hover:text-primary transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-2 text-mink hover:text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between border-t border-mink/20 px-6 py-4">
+<p class="font-body-md text-sm text-on-surface-variant">Showing 1 to 3 of 124 items</p>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 flex items-center justify-center border border-mink/40 text-mink hover:text-primary hover:border-primary transition-colors disabled:opacity-50">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center border border-primary text-primary font-body-md text-sm">1</button>
+<button class="w-8 h-8 flex items-center justify-center border border-mink/40 text-mink hover:text-primary hover:border-primary transition-colors font-body-md text-sm">2</button>
+<button class="w-8 h-8 flex items-center justify-center border border-mink/40 text-mink hover:text-primary hover:border-primary transition-colors font-body-md text-sm">3</button>
+<span class="text-mink mx-1">...</span>
+<button class="w-8 h-8 flex items-center justify-center border border-mink/40 text-mink hover:text-primary hover:border-primary transition-colors disabled:opacity-50">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

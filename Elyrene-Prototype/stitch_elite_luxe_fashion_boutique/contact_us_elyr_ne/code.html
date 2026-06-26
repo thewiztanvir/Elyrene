@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Elyrène</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#5a4312",
+                        "tertiary-fixed-dim": "#e4c285",
+                        "on-tertiary-fixed": "#261900",
+                        "on-surface-variant": "#444748",
+                        "inverse-on-surface": "#f0f1f1",
+                        "primary-container": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-container": "#6f6051",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-container": "#eeeeee",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-surface": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "tertiary-container": "#261900",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#858383",
+                        "inverse-primary": "#c9c6c5",
+                        "primary-fixed": "#e5e2e1",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#747878",
+                        "secondary": "#6b5c4d",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary-fixed": "#f4dfcc",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#000000",
+                        "on-tertiary-container": "#9c8049",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "secondary-container": "#f1dcc9",
+                        "tertiary-fixed": "#ffdea4",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#524436",
+                        "secondary-fixed-dim": "#d7c3b1",
+                        "primary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed": "#24190e",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "section-gap": "160px",
+                        "margin-tablet": "40px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "button": ["raleway"],
+                        "body-lg": ["raleway"],
+                        "label-caps": ["raleway"],
+                        "headline-lg": ["ebGaramond"],
+                        "display-md": ["ebGaramond"],
+                        "body-md": ["raleway"],
+                        "headline-lg-mobile": ["ebGaramond"],
+                        "headline-md": ["ebGaramond"],
+                        "display-lg": ["ebGaramond"]
+                    },
+                    "fontSize": {
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "300" }],
+                        "display-md": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "300" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .input-underline {
+            border: none;
+            border-bottom: 1px solid #c4c7c7; /* outline-variant */
+            background-color: transparent;
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            box-shadow: none !important;
+            transition: border-color 0.3s ease;
+        }
+        .input-underline:focus {
+            outline: none;
+            border-bottom: 1px solid #1a1c1c; /* on-surface */
+            box-shadow: none !important;
+        }
+        
+        /* Floating label logic for custom style */
+        .floating-input-group {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .floating-input-group label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .floating-input-group input:focus + label,
+        .floating-input-group input:not(:placeholder-shown) + label,
+        .floating-input-group textarea:focus + label,
+        .floating-input-group textarea:not(:placeholder-shown) + label {
+            top: -10px;
+            font-size: 10px;
+            color: #1a1c1c;
+        }
+        .floating-input-group textarea + label {
+            top: 20px;
+        }
+        .floating-input-group textarea:focus + label,
+        .floating-input-group textarea:not(:placeholder-shown) + label {
+            top: -10px;
+        }
+
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed min-h-screen flex flex-col">
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-background border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<!-- Mobile Menu Icon -->
+<button aria-label="Menu" class="md:hidden text-primary focus:outline-none">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="font-display-md text-display-md tracking-tighter text-primary" href="#">ELYRÈNE</a>
+<!-- Desktop Links -->
+<ul class="hidden md:flex space-x-12">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-all duration-300" href="#">Sarees</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-all duration-300" href="#">Bangles</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-all duration-300" href="#">Ornaments</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-all duration-300" href="#">Ethnic Wear</a></li>
+</ul>
+<!-- Trailing Actions -->
+<div class="flex space-x-6 items-center">
+<button aria-label="favorite" class="text-primary hover:text-on-tertiary-container transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">favorite</span>
+</button>
+<button aria-label="shopping bag" class="text-primary hover:text-on-tertiary-container transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 md:pt-48 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<header class="text-center mb-24 md:mb-32">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-6">Connect With Us</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                We invite you to reach out for private appointments, styling inquiries, or exquisite bespoke commissions. Our ateliers are at your service.
+            </p>
+</header>
+<!-- Bento Grid Layout for Contact -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Imagery & Vibe -->
+<div class="lg:col-span-5 flex flex-col justify-between h-full space-y-12">
+<div class="w-full aspect-[3/4] relative overflow-hidden group">
+<img alt="Elegant Elyrene model in a soft, light-filled atelier setting." class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A sophisticated editorial fashion portrait of a model draped in luxurious, sheer fabric inside a minimalist atelier. The scene is bathed in soft, high-key natural light filtering through large windows, creating a serene, bright light-mode aesthetic. The color palette emphasizes pristine whites, soft ivories, and deep noir shadows. The mood is tranquil, elegant, and timeless, capturing the essence of quiet luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4y6vlBo1i1QGYDCTf_vTpO-gKwBXEWyiA9eFMYM7aNFtSgu87jYDk1JD5jmWu23qn5sZk9FTli-Vkp64CAgAgA6aK42zfiCB6wbs7Wy4OlmcOIlapXJi3l-Q6EZXstXoWGiaHwL0tvbNeHMQI2rQCcAb-1Y7fYKmXDvcEAvLC0QEdlMDS5LTqe9xSk-SpQK-fkf2Y9ZDC-lHVe5I1A03WeQNK77xlk36Yqbx0bZEJfja-FUOC9Nj0j1VDUp912-syNsUTNB2l5aE"/>
+</div>
+<!-- Contact Details Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 md:p-12">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">The Maison</h3>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-outline mt-1" style="font-variation-settings: 'wght' 200;">location_on</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">Flagship Boutique</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">14 Rue de la Paix<br/>75002 Paris, France</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-outline mt-1" style="font-variation-settings: 'wght' 200;">call</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">Concierge</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">+33 1 42 61 00 00</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-outline mt-1" style="font-variation-settings: 'wght' 200;">mail</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-2">Inquiries</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">atelier@elyrene.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Form & Map -->
+<div class="lg:col-span-7 flex flex-col space-y-gutter">
+<!-- Inquiry Form -->
+<div class="bg-surface-container-lowest p-8 md:p-16 h-full flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Send an Inquiry</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">Please provide your details below and our concierge will attend to your request promptly.</p>
+<form action="#" class="space-y-8" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="floating-input-group">
+<input class="input-underline w-full font-body-md text-body-md text-primary h-12" id="firstName" name="firstName" placeholder=" " required="" type="text"/>
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" for="firstName">First Name</label>
+</div>
+<div class="floating-input-group">
+<input class="input-underline w-full font-body-md text-body-md text-primary h-12" id="lastName" name="lastName" placeholder=" " required="" type="text"/>
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" for="lastName">Last Name</label>
+</div>
+</div>
+<div class="floating-input-group">
+<input class="input-underline w-full font-body-md text-body-md text-primary h-12" id="email" name="email" placeholder=" " required="" type="email"/>
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" for="email">Email Address</label>
+</div>
+<div class="floating-input-group mt-4">
+<textarea class="input-underline w-full font-body-md text-body-md text-primary resize-none pt-4" id="message" name="message" placeholder=" " required="" rows="4"></textarea>
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" for="message">Your Message</label>
+</div>
+<div class="pt-8">
+<button class="bg-primary text-on-primary font-button text-button uppercase tracking-widest px-12 py-4 hover:bg-on-tertiary-container transition-colors duration-300 w-full md:w-auto" type="submit">
+                                Send Message
+                            </button>
+</div>
+</form>
+</div>
+<!-- Map Section -->
+<div class="w-full h-80 bg-surface-variant relative overflow-hidden border border-outline-variant grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition-all duration-500">
+<img alt="Map of Paris location" class="absolute inset-0 w-full h-full object-cover" data-alt="A stylized, minimalist street map of central Paris, focusing on the area around Rue de la Paix. The map uses a very muted, light-mode color palette dominated by ivories, soft greys, and subtle mink outlines for the streets. There is a single, elegant black marker indicating a boutique location. The aesthetic is clean, high-end, and editorial, avoiding bright colors typical of standard navigation maps." data-location="Paris, France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhRANZiu7PM0QLuvlkMzRtZHLENqor9Qyl1k1ZqXeW_xbJONp7p3K4sraE4KTL_dEnlPbaVE8s6UCEn-tdwPHuin9KNft4DURzS5mCBxP2tTPyePADO1ji1KhvIUOz27VTwIhSOsTL6pNjS7T_Tp35DlFFhyIbOOs7ndmv1NhOt1i6SYhuxULKqpGRnlARZ8llyQeXkLsxZ3PVWFYuCM6jVuA7qs_qRTvgt3Vq7sYApLJ_zhiKDUY9VdVWkZ_zxQFJ9ef471T2YAE"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating WhatsApp Button -->
+<a aria-label="Contact on WhatsApp" class="fixed bottom-8 right-8 z-50 bg-tertiary-fixed-dim text-on-tertiary-fixed w-16 h-16 flex items-center justify-center rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:scale-110 transition-transform duration-300 group" href="#">
+<!-- Using a generic chat icon since brand icons aren't in material symbols, styled as requested -->
+<span class="material-symbols-outlined text-3xl group-hover:text-primary transition-colors duration-300" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<!-- Footer Shell -->
+<footer class="w-full pt-section-gap pb-12 bg-background border-t border-outline-variant px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
+<div class="col-span-1 md:col-span-4 flex flex-col justify-between">
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8 md:mb-0" href="#">ELYRÈNE</a>
+</div>
+<div class="col-span-1 md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-300" href="#">Brand Story</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-300" href="#">Craftsmanship</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-300" href="#">Shipping</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-300" href="#">Sustainability</a>
+</div>
+</div>
+</div>
+<!-- Social & Copyright -->
+<div class="flex flex-col md:flex-row justify-between items-center border-t border-outline-variant pt-8">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4 md:mb-0">
+                © 2024 ELYRÈNE. ALL RIGHTS RESERVED.
+            </p>
+<div class="flex space-x-6">
+<!-- Using generic icons for social to follow Material rules -->
+<a aria-label="Instagram" class="text-primary hover:text-on-tertiary-container transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">photo_camera</span>
+</a>
+<a aria-label="Pinterest" class="text-primary hover:text-on-tertiary-container transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 200;">push_pin</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

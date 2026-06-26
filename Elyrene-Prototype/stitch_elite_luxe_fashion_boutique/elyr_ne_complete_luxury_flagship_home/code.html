@@ -1,0 +1,446 @@
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elyrène - Quiet Luxury</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#eeeeee",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "secondary": "#6b5c4d",
+                        "surface-container-low": "#f3f3f4",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed-variant": "#474646",
+                        "outline-variant": "#c4c7c7",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "background": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#5a4312",
+                        "on-tertiary-container": "#9c8049",
+                        "on-secondary-container": "#6f6051",
+                        "tertiary": "#000000",
+                        "primary": "#000000",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#747878",
+                        "secondary-fixed": "#f4dfcc",
+                        "tertiary-container": "#261900",
+                        "on-primary-container": "#858383",
+                        "inverse-primary": "#c9c6c5",
+                        "tertiary-fixed-dim": "#e4c285",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed-variant": "#524436",
+                        "on-secondary-fixed": "#24190e",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-surface": "#2f3131",
+                        "surface": "#f9f9f9",
+                        "secondary-container": "#f1dcc9",
+                        "on-surface": "#1a1c1c",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#d7c3b1",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary-fixed": "#261900",
+                        "on-primary-fixed": "#1c1b1b",
+                        "tertiary-fixed": "#ffdea4",
+                        "primary-container": "#1c1b1b",
+                        "on-background": "#1a1c1c",
+                        "noir": "#0E0E0E",
+                        "ivory": "#FFFFFF",
+                        "gold": "#C9A96E",
+                        "mink": "#8C7B6B"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "margin-mobile": "20px",
+                        "margin-tablet": "40px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Raleway", "sans-serif"],
+                        "label-caps": ["Raleway", "sans-serif"],
+                        "body-md": ["Raleway", "sans-serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "display-md": ["EB Garamond", "serif"],
+                        "button": ["Raleway", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "display-lg": ["EB Garamond", "serif"],
+                        "headline-lg": ["EB Garamond", "serif"],
+                        "cormorant": ["Cormorant Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "display-md": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "300" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "300" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .fade-in-section {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .img-zoom-hover {
+            overflow: hidden;
+        }
+        .img-zoom-hover img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom-hover:hover img {
+            transform: scale(1.04);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::placeholder {
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body class="bg-ivory text-noir antialiased font-body-md overflow-x-hidden">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-ivory/80 backdrop-blur-md border-b border-mink/10">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="hidden md:flex space-x-10">
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">SAREES</a>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">BANGLES</a>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">ORNAMENTS</a>
+<a class="font-label-caps text-label-caps text-mink hover:text-noir transition-colors duration-300" href="#">ETHNIC WEAR</a>
+</div>
+<button class="md:hidden text-noir">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2">
+<h1 class="font-headline-md tracking-[0.3em] font-light text-noir cursor-pointer">ELYRÈNE</h1>
+</div>
+<div class="flex space-x-6 items-center">
+<button class="text-noir hover:text-gold transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-noir hover:text-gold transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="text-noir hover:text-gold transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 text-[8px] bg-gold text-noir w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[95vh] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Editorial Image" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+<div class="absolute inset-0 bg-noir/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl fade-in-section">
+<span class="font-label-caps text-label-caps text-ivory/80 mb-4 block tracking-[0.4em]">AUTUMN WINTER 2024</span>
+<h2 class="font-display-md md:font-display-lg text-ivory mb-8 tracking-tight italic">The Heritage Archive</h2>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="min-w-[200px] border border-ivory text-ivory font-button text-button px-8 py-4 hover:bg-ivory hover:text-noir transition-all duration-500 uppercase tracking-widest" href="#">Explore Collection</a>
+<a class="min-w-[200px] bg-gold text-noir font-button text-button px-8 py-4 hover:bg-ivory transition-all duration-500 uppercase tracking-widest" href="#">Shop the Drape</a>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+<span class="material-symbols-outlined text-ivory font-thin">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Featured Collections -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="group relative img-zoom-hover aspect-[4/5] bg-surface-container">
+<img alt="Bridal Collection" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+<div class="absolute inset-0 bg-noir/10 group-hover:bg-noir/30 transition-colors duration-700"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-12 text-ivory">
+<h3 class="font-headline-lg mb-4 italic">The Bridal Edit</h3>
+<p class="font-body-md text-ivory/80 mb-8 max-w-sm">Timeless silhouettes for the contemporary bride.</p>
+<a class="font-label-caps border-b border-ivory w-fit pb-1 hover:text-gold hover:border-gold transition-colors" href="#">VIEW COLLECTION</a>
+</div>
+</div>
+<div class="group relative img-zoom-hover aspect-[4/5] bg-surface-container">
+<img alt="Heritage Collection" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+<div class="absolute inset-0 bg-noir/10 group-hover:bg-noir/30 transition-colors duration-700"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-12 text-ivory">
+<h3 class="font-headline-lg mb-4 italic">Heritage Silk</h3>
+<p class="font-body-md text-ivory/80 mb-8 max-w-sm">Preserving centuries-old weaving techniques.</p>
+<a class="font-label-caps border-b border-ivory w-fit pb-1 hover:text-gold hover:border-gold transition-colors" href="#">VIEW COLLECTION</a>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-16 border-b border-mink/20 pb-6">
+<div>
+<span class="font-label-caps text-mink tracking-widest block mb-2">JUST RELEASED</span>
+<h2 class="font-headline-lg italic">New Arrivals</h2>
+</div>
+<a class="font-label-caps text-noir hover:text-gold transition-colors border-b border-noir pb-1" href="#">SHOP ALL NEW</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-white mb-6 relative overflow-hidden">
+<img alt="Aurelia Pendant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-noir text-ivory font-button text-[10px] px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-widest">ADD TO BAG</button>
+</div>
+<h3 class="font-body-lg text-noir mb-1 group-hover:text-gold transition-colors">Aurelia Pendant</h3>
+<p class="font-label-caps text-mink">$1,850.00</p>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-white mb-6 relative overflow-hidden">
+<img alt="Empress Bangle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-noir text-ivory font-button text-[10px] px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-widest">ADD TO BAG</button>
+</div>
+<h3 class="font-body-lg text-noir mb-1 group-hover:text-gold transition-colors">Empress Gold Bangle</h3>
+<p class="font-label-caps text-mink">$2,400.00</p>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-white mb-6 relative overflow-hidden">
+<img alt="Elysian Choker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-noir text-ivory font-button text-[10px] px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-widest">ADD TO BAG</button>
+</div>
+<h3 class="font-body-lg text-noir mb-1 group-hover:text-gold transition-colors">Elysian Diamond Choker</h3>
+<p class="font-label-caps text-mink">$4,200.00</p>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-white mb-6 relative overflow-hidden">
+<img alt="Imperial Earrings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-noir text-ivory font-button text-[10px] px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-widest">ADD TO BAG</button>
+</div>
+<h3 class="font-body-lg text-noir mb-1 group-hover:text-gold transition-colors">Imperial Gold Studs</h3>
+<p class="font-label-caps text-mink">$1,150.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers / Categories -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center group cursor-pointer">
+<div class="aspect-square bg-surface-container-low mb-8 relative overflow-hidden">
+<img alt="Sarees Category" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+</div>
+<h3 class="font-headline-md italic mb-4">Sarees</h3>
+<a class="font-label-caps text-[10px] tracking-[0.2em] border-b border-noir pb-1 hover:text-gold hover:border-gold transition-colors" href="#">SHOP SAREES</a>
+</div>
+<div class="text-center group cursor-pointer">
+<div class="aspect-square bg-surface-container-low mb-8 relative overflow-hidden">
+<img alt="Ornaments Category" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+</div>
+<h3 class="font-headline-md italic mb-4">Ornaments</h3>
+<a class="font-label-caps text-[10px] tracking-[0.2em] border-b border-noir pb-1 hover:text-gold hover:border-gold transition-colors" href="#">SHOP ORNAMENTS</a>
+</div>
+<div class="text-center group cursor-pointer">
+<div class="aspect-square bg-surface-container-low mb-8 relative overflow-hidden">
+<img alt="Bangles Category" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+</div>
+<h3 class="font-headline-md italic mb-4">Bangles</h3>
+<a class="font-label-caps text-[10px] tracking-[0.2em] border-b border-noir pb-1 hover:text-gold hover:border-gold transition-colors" href="#">SHOP BANGLES</a>
+</div>
+</div>
+</section>
+<!-- Seasonal / Limited Edition -->
+<section class="bg-noir py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="w-full lg:w-1/2">
+<div class="relative group">
+<div class="overflow-hidden">
+<img alt="Limited Edition Vault" class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-gold p-12 hidden lg:block">
+<span class="font-label-caps text-[10px] tracking-[0.3em] block mb-2 text-noir">SERIALIZED PIECES</span>
+<span class="font-headline-md italic text-noir">01/10</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 text-ivory">
+<span class="font-label-caps text-gold tracking-[0.4em] block mb-6">THE PRIVATE ARCHIVE</span>
+<h2 class="font-display-md italic mb-8 leading-tight">Limited Edition: The Noir Silk series</h2>
+<p class="font-body-lg text-mink mb-12 max-w-md">Only 100 pieces are hand-loomed for this collection annually. Each saree carries a unique hand-stitched serial number and a certificate of heritage authenticity.</p>
+<a class="inline-block bg-ivory text-noir font-button px-10 py-5 hover:bg-gold transition-colors duration-500 tracking-widest" href="#">REQUEST EARLY ACCESS</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Story snippet -->
+<section class="py-section-gap bg-ivory">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<span class="font-label-caps text-mink tracking-widest block mb-8">OUR PHILOSOPHY</span>
+<h2 class="font-cormorant text-5xl md:text-6xl text-noir italic mb-10 leading-relaxed">"True luxury isn't about being noticed, but about being remembered through the quiet weight of gold and the whisper of silk."</h2>
+<div class="w-24 h-px bg-mink mx-auto mb-10"></div>
+<p class="font-body-lg text-mink max-w-2xl mx-auto leading-loose italic">
+                Elyrène was founded on a singular vision: to elevate the master-craftsmanship of the Indian subcontinent to the global stage of haute couture. We don't follow trends; we preserve legacies.
+            </p>
+</div>
+</section>
+<!-- Customer Testimonials -->
+<section class="py-section-gap bg-surface-container-low border-y border-mink/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="text-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">format_quote</span>
+<p class="font-body-lg text-noir italic mb-8">"The Imperial Bangles have a weight and a finish that I haven't seen since my grandmother's heirloom collection. Absolutely stunning."</p>
+<p class="font-label-caps text-[10px] tracking-widest text-mink">— ELEANOR R., LONDON</p>
+</div>
+<div class="text-center border-x border-mink/20 px-8">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">format_quote</span>
+<p class="font-body-lg text-noir italic mb-8">"Wearing an Elyrène saree is like draping oneself in poetry. The fluid silk moves with an elegance that is truly unparalleled in modern fashion."</p>
+<p class="font-label-caps text-[10px] tracking-widest text-mink">— PRIYA K., NEW YORK</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-gold text-4xl mb-6">format_quote</span>
+<p class="font-body-lg text-noir italic mb-8">"Minimalist yet incredibly opulent. This is exactly what quiet luxury should feel like. The service was as impeccable as the jewelry."</p>
+<p class="font-label-caps text-[10px] tracking-widest text-mink">— SOFIA V., MILAN</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram Feed -->
+<section class="pt-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12 flex justify-between items-end">
+<h2 class="font-headline-md italic">Journal on Instagram</h2>
+<a class="font-label-caps text-mink hover:text-gold transition-colors" href="#">@ELYRENE.HAUTE</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 w-full">
+<div class="aspect-square bg-surface-container overflow-hidden group relative">
+<img alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoQGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group relative">
+<img alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group relative">
+<img alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkaERf0194WF6KCkubgUqkfyVnR3F7TCf6NxGiyYvRcIADZDEzW41KlBp-dRviQyzCm0PdzAkf_Qb5oxUxY3QCAaUViGxexFcD2frLFb7_q5ohnZ0t6i7QbCAVW6bkX8pkGONVNE6JgfTAVldTBpQArbIeC12mp3g2Q7MMydatERejOfsDdGgj3E5-by1rKq1_19rq36ocyK34dypyolGgj7ZkKPOznrKwC9eGISBgPnNT1sypWOo5GzE5OFTQW9qkXRVOk2EFfI"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group relative">
+<img alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICnHKYXKLwWleb_RwDdqJ09EHOGxtgKL6-EcAkGiIyZ22nwwiN5CJopi1zBeGQeJQEoRth-xNIUoNpT6ovfhoGVGSyZ36PjKZ-Sd7ALG1PCEogsIr_onuMA0j7fFkT_psuBxFZPWgQiYqeLSbjJ28gDmfWsuj8xiWVDiMTcPAXWXELW_WNUdD3ZAA-GvIYH1W-7crTZY4yWyeF29qi_u8zTbVoZZjzKirY4UZOuTpkvDiwRHvoIw2Roj6RT7E1eFNXs90SfIJy3M"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group relative">
+<img alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9gw3yqVdb4XXoGaLq1rh20UFBYkbFTqI67OrKmu1WE9FM2dsBbsM1s1Et0Y3VrlLbwG6q-8gGnxBdg7AItcWoL9fMEgN8fSEFxVdhR0g4NMRU3ZhQMX9yLD8kx1pCniAbaSth8O7SQLbPlWF27lLp4hJiYSzEpao4A_2tQufP4c7UdMYTvnNDI5WVu19l1p6EEoREmRGfPkGA8b30ECaU-D0csfgqDE4Fc_1zzn44w9tabX6Ci3vMllvoOTkwQprXSpBH-Pvv_w"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden group relative">
+<img alt="Instagram Post" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj1s8-mjtmKYKEqs5wbf5uUknA-rt_t9wZdHq2mj3KDo5lXqIPNKnpg3NlYgrea0b4c9pMT4uqWm7uotW3XnE6Chcaay0hNE21VoZPFxAo4YYKy-uQgwBmRvjFWsSVYAKGLPAAg-ZKrmT8Tc5pt7CrbbQiLPnnnRAU57U6WVBOTIGwSRvNkqzhiVE8yt2CM8-a2bM1M0Esu1r8HkhTDiUfYzyq1S0jjiTN-ZeNy8wJG14rOZd8hOkQYVlPDuAadCxfGDBzlgZTgJM"/>
+<div class="absolute inset-0 bg-noir/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-ivory">favorite</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Signup -->
+<section class="py-section-gap bg-white">
+<div class="max-w-2xl mx-auto px-margin-mobile text-center">
+<h2 class="font-headline-lg italic mb-6">Join the Inner Circle</h2>
+<p class="font-body-md text-mink mb-12">Receive exclusive early access to private archives and invitations to our secret seasonal viewings.</p>
+<form class="flex flex-col sm:flex-row gap-4 border-b border-noir pb-2">
+<input class="flex-grow bg-transparent border-none focus:ring-0 px-0 py-4 font-body-md text-noir" placeholder="EMAIL ADDRESS" required="" type="email"/>
+<button class="font-button text-[10px] tracking-[0.3em] uppercase px-6 py-4 hover:text-gold transition-colors" type="submit">SUBSCRIBE</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-noir text-ivory pt-section-gap pb-12 border-t border-mink/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-y-16 gap-x-gutter mb-24">
+<div class="md:col-span-4">
+<h2 class="font-headline-md tracking-[0.4em] font-light mb-8">ELYRÈNE</h2>
+<p class="font-body-md text-mink max-w-xs mb-10 leading-relaxed">Redefining modern heirloom fashion through meticulous craftsmanship and quiet luxury.</p>
+<div class="flex space-x-6">
+<a class="text-mink hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">facebook</span></a>
+<a class="text-mink hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-mink hover:text-gold transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div class="md:col-span-2 md:col-start-6">
+<h4 class="font-label-caps text-mink tracking-widest mb-8">COLLECTIONS</h4>
+<ul class="space-y-4 font-body-md text-mink">
+<li><a class="hover:text-gold transition-colors" href="#">Sarees</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Bangles</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Ornaments</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Bridal Edit</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-mink tracking-widest mb-8">MAISON</h4>
+<ul class="space-y-4 font-body-md text-mink">
+<li><a class="hover:text-gold transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Craftsmanship</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Atelier Services</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-caps text-mink tracking-widest mb-8">CONCIERGE</h4>
+<ul class="space-y-4 font-body-md text-mink">
+<li><a class="hover:text-gold transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Shipping</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">Appointments</a></li>
+<li><a class="hover:text-gold transition-colors" href="#">FAQs</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-mink/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-caps text-[10px] text-mink tracking-widest">© 2024 ELYRÈNE HAUTE COUTURE. ALL RIGHTS RESERVED.</p>
+<div class="flex space-x-8">
+<a class="font-label-caps text-[10px] text-mink hover:text-gold tracking-widest" href="#">PRIVACY</a>
+<a class="font-label-caps text-[10px] text-mink hover:text-gold tracking-widest" href="#">TERMS</a>
+<a class="font-label-caps text-[10px] text-mink hover:text-gold tracking-widest" href="#">ACCESSIBILITY</a>
+</div>
+</div>
+</footer>
+</body></html>

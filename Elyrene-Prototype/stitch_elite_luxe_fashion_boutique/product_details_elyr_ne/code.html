@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elyrène - Saree Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#474646",
+                        "on-secondary-fixed": "#24190e",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "outline-variant": "#c4c7c7",
+                        "surface-tint": "#5f5e5e",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#6f6051",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "on-surface-variant": "#444748",
+                        "primary-container": "#1c1b1b",
+                        "surface-container": "#eeeeee",
+                        "primary": "#000000",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#e5e2e1",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#6b5c4d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "tertiary-fixed": "#ffdea4",
+                        "outline": "#747878",
+                        "secondary-fixed": "#f4dfcc",
+                        "tertiary-fixed-dim": "#e4c285",
+                        "on-primary-container": "#858383",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-container": "#9c8049",
+                        "on-secondary-fixed-variant": "#524436",
+                        "secondary-fixed-dim": "#d7c3b1",
+                        "on-tertiary-fixed": "#261900",
+                        "inverse-primary": "#c9c6c5",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-fixed-variant": "#5a4312",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#f1dcc9",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#261900",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "margin-tablet": "40px",
+                        "section-gap": "160px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Raleway", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "display-lg": ["EB Garamond", "serif"],
+                        "display-md": ["EB Garamond", "serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-md": ["Raleway", "sans-serif"],
+                        "body-lg": ["Raleway", "sans-serif"],
+                        "button": ["Raleway", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "display-md": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "300" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "300" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #ffffff; /* Ivory base */
+            color: #000000; /* Noir text */
+        }
+        
+        /* Custom hide scrollbar for gallery */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .image-zoom-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-zoom {
+            transition: transform 0.5s ease;
+        }
+
+        .image-zoom-container:hover .image-zoom {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary/90 backdrop-blur-md border-b border-outline-variant flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto md:px-margin-tablet sm:px-margin-mobile">
+<!-- Brand -->
+<a class="font-display-md text-display-md tracking-tighter text-primary dark:text-surface flex items-center gap-4 cursor-pointer transition-opacity duration-200" href="#">
+<img alt="Elyrène Logo" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZeZqNGkIe0p6SRCMUQl-73MarnUY6c9qcFQir-XreWDJLjgTDubl4CZ9WuZ52kXV34ke8aONDjV9fY3aKaZAbJlG8MdNAUE7cAZFN9tJJjOmjAwkixTG8qRUy8eYDdXEqCxTkEnX-g0uLUegeGDZEbDB8bx1V1JEqUDjN_UtYSfMDPI75O-rwSGMGmWgbDXfoKe5ZQEOH7J9KO41_68fiodP5dbhJza5-SzyI9AJgPwhhaXKWlsnmSc0YLz-OE_RY13sFQ9iqpXk"/>
+<span>ELYRÈNE</span>
+</a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+<a class="text-secondary border-b border-secondary pb-1 cursor-pointer transition-opacity duration-200" href="#">Sarees</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-secondary transition-all cursor-pointer" href="#">Bangles</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-secondary transition-all cursor-pointer" href="#">Ornaments</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-secondary transition-all cursor-pointer" href="#">Ethnic Wear</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-6 text-primary dark:text-surface">
+<button class="hover:text-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:text-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="hover:text-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="md:hidden hover:text-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop md:px-margin-tablet sm:px-margin-mobile">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-12 font-label-caps text-label-caps text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Sarees</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary">The Midnight Silk</span>
+</nav>
+<!-- Product Section (Grid) -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Image Gallery (Left Column - 7/12) -->
+<div class="col-span-12 lg:col-span-7 flex flex-col md:flex-row-reverse gap-4">
+<!-- Main Image Container -->
+<div class="w-full md:w-5/6 relative aspect-[3/4] image-zoom-container bg-surface-container-low">
+<img alt="The Midnight Silk Saree" class="absolute inset-0 w-full h-full object-cover image-zoom" data-alt="A high-fashion editorial shot of a luxurious black silk saree draped elegantly over a minimalist mannequin or model in a bright, modern studio. The lighting is soft and directional, highlighting the rich texture and subtle sheen of the silk fabric against a pristine ivory background. The composition is clean, sophisticated, and embodies a quiet luxury aesthetic, focusing on the impeccable craftsmanship of the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy4Gi3ASaGoohiGld9i4Uz0H7VE_y6Rbjjza29HkVFa2_LM7OcwqE9MO2_-yY-2qxhp0lQuGi2Jpvv87mpHEGDgZmOJ6x6fojFsYWWWSh7ke8BTBdYa15oLz7K8jv1SNbYyJuuiclMiS47u4wDaxALCIdeNf7Ef3ZETs5tiI4dUb_RZ1FpTU2YUs_tp7iij-KelJbntiAun7I5olLBkFVqQhZKynuKK3gIz-LEGvv3A568r7TSKRe6wLKgX8xIyJ93J2C5yvzAAM4"/>
+</div>
+<!-- Thumbnails -->
+<div class="w-full md:w-1/6 flex flex-row md:flex-col gap-4 overflow-x-auto md:overflow-y-auto hide-scrollbar snap-x md:snap-y">
+<button class="flex-shrink-0 w-20 h-24 md:w-full md:h-auto md:aspect-[3/4] border border-outline-variant snap-center relative">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="Detailed close-up shot of luxurious black silk saree fabric, emphasizing its smooth texture and subtle reflective sheen under soft, diffuse lighting in a minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbPDeZe1Vh-LQiZQ_FwidFRVAg3nYtiIyX_8wZ1-oAQFTDkiicw5lqtIAzVzkNWYjGuTv9fU_koZXGSOERDxmshjjhfa-nPKQ2WQmy62vxbHNLYV27IhL99ATqvJbQjedrXULOuFF0WDYVBk0M4XFfBPiL0v934kGLYHZUpjU_-wSnOip5YgskF5eF1k7iYW-ug_IH5TujLJP59kO05Bn7sY_u3Y75HhCdhGvE7onaRFkI5SwV3hkuiSWYFjy-xsjXsxCstivkmWI"/>
+</button>
+<button class="flex-shrink-0 w-20 h-24 md:w-full md:h-auto md:aspect-[3/4] border border-transparent hover:border-outline-variant transition-colors snap-center relative opacity-70 hover:opacity-100">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="A close-up view of the intricate gold embroidery or border detailing on a dark luxury silk saree. The lighting is pristine white, casting no harsh shadows, ensuring the focus remains on the artisanal craftsmanship and quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI_vJyAK7HOp0S8SLhUZ2v2T6XL4ejJuFWhhPST3fwXu8k2WFfKV0IlmHY7P0yn1xuXuBwjzQjWNfkY6Q8Y9TGkX0WxxZ9rf5d9eH36gmZpzx-DW-I6DBA_jDzgdmJF4NJhFMgT7gmBclKOLnn6dSFYv6CLpYKNB7pWxkTC5yPv-wrIZdW7uqd0Cn9Es5otclWWkmPGXPU_iZW4CVyd7sTVNtA7O4Y1IG1lOn-rKBxLFn_Vm1m8pO0i6iJKRydJGaj-gdBbYpu1q4"/>
+</button>
+<button class="flex-shrink-0 w-20 h-24 md:w-full md:h-auto md:aspect-[3/4] border border-transparent hover:border-outline-variant transition-colors snap-center relative opacity-70 hover:opacity-100">
+<img alt="Thumbnail 3" class="w-full h-full object-cover" data-alt="An elegant, full-length editorial presentation of a flowing black silk saree, suspended slightly to show drape and movement. Set in a minimalist gallery space with high-key lighting, embodying sophistication and heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ojGVtRvxBJzDeg9H43D--9Bl9-rcSH8eb11qvYA6ebG1BiOedsx-Iz4B1hnsMsThsUXoROvWoc7G4OUzsrnsxAYr1sMHHf3QESaKzHW0HqrRYK-5uSAxGS68FS8EEzMgbDbhd4FsXKBB9rq-b9LG-FBAF4uZfzhqsD0_fQ5tsQSWn1y0ZvW6nwRlCZCsO0EhXFdtApSwtlWulUiAfSTSKhzv5IOwenjuoZWIJ1hlJHGpsP8LJxaT609gLm_47oAy1JfbhZISfK8"/>
+</button>
+</div>
+</div>
+<!-- Product Info (Right Column - 5/12) -->
+<div class="col-span-12 lg:col-span-5 flex flex-col pt-8 lg:pt-0 lg:pl-12">
+<h1 class="font-headline-lg text-headline-lg md:font-headline-lg-mobile md:text-headline-lg-mobile mb-4">The Midnight Silk</h1>
+<div class="font-body-lg text-body-lg text-secondary mb-8">
+                        ₹ 45,000
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12 leading-relaxed">
+                        An embodiment of quiet luxury, The Midnight Silk is woven from the finest pure mulberry silk. Its profound black hue serves as a canvas for subtle, hand-loomed texture. A garment designed not just to be worn, but to be inherited, featuring a delicate self-woven border that catches the light with understated elegance.
+                    </p>
+<!-- Variants (Fabric Finish) -->
+<div class="mb-12">
+<h3 class="font-label-caps text-label-caps mb-4 border-b border-outline-variant pb-2">Finish</h3>
+<div class="flex gap-4">
+<button class="px-6 py-3 border border-primary text-primary font-button text-button hover:bg-surface-container transition-colors">Matte Silk</button>
+<button class="px-6 py-3 border border-outline-variant text-on-surface-variant font-button text-button hover:border-primary transition-colors">Luminous Satin</button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4 mb-16">
+<button class="w-full py-4 bg-primary text-on-primary font-button text-button hover:bg-secondary transition-colors duration-300 flex justify-center items-center gap-2">
+                            ADD TO BAG
+                        </button>
+<button class="w-full py-4 border border-primary bg-transparent text-primary font-button text-button hover:bg-surface-container transition-colors duration-300 flex justify-center items-center gap-2">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+                            SAVE TO WISHLIST
+                        </button>
+</div>
+<!-- Accordions for Details -->
+<div class="border-t border-outline-variant">
+<!-- Details Accordion -->
+<div class="border-b border-outline-variant">
+<button class="w-full py-6 flex justify-between items-center text-left hover:text-secondary transition-colors group">
+<span class="font-label-caps text-label-caps">Details &amp; Care</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-focus:rotate-180">add</span>
+</button>
+<div class="hidden pb-6 font-body-md text-body-md text-on-surface-variant">
+<ul class="list-none space-y-2">
+<li>• 100% Pure Mulberry Silk</li>
+<li>• Hand-loomed in Varanasi</li>
+<li>• Length: 5.5 meters + 1 meter blouse piece</li>
+<li>• Dry clean only</li>
+</ul>
+</div>
+</div>
+<!-- Shipping Accordion -->
+<div class="border-b border-outline-variant">
+<button class="w-full py-6 flex justify-between items-center text-left hover:text-secondary transition-colors group">
+<span class="font-label-caps text-label-caps">Shipping &amp; Returns</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-focus:rotate-180">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommended Section -->
+<section class="mt-section-gap">
+<div class="flex justify-between items-end border-b border-outline-variant pb-4 mb-12">
+<h2 class="font-headline-md text-headline-md">Curated for You</h2>
+<a class="font-label-caps text-label-caps hover:text-secondary transition-colors" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-6 relative">
+<img alt="The Ivory Pearl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A pristine, light-colored luxury ethnic garment, beautifully draped and photographed in a minimalist gallery setting. The lighting is soft and even, highlighting the intricate gold embroidery against the soft fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG7-IGX_4YvA-Ld2K7pCL1feG66kMCWNYeXbvpL3MisXuyvzCy2Q7-ZnH1HPXjX7iFBFSzL9K5SpaNg1CBxkKb_FPJtyIazdshCYjV6edbMP7ooQbUg9aMiVzYJf3DGUYcVeY3IZ4qTyQpzcnbllSfrq5xUFQ-5bq7IlD6OkwFbI5O0oisvH2uZEwSm8IvK3FI9nPe7o2YvfTiBWzI8WKr2QhkQaH4x-E663MLvMkxgGXZMjxHW3RSfUl8qSGVa-j_DAa5E0yIu9U"/>
+</div>
+<div class="text-center">
+<h3 class="font-body-lg text-body-lg mb-1">The Ivory Pearl</h3>
+<p class="font-body-md text-body-md text-secondary">₹ 38,000</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-6 relative">
+<img alt="Crimson Heirloom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious deep red silk saree, featuring subtle metallic threads, presented in a high-fashion editorial style against a vast, clean ivory background. The mood is sophisticated and elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgnatwf3Wd4GA2ghL5VX8EEsPC6ta7CdO7Cv0DlbeXBYpKTLOC9TKWztVK5pVTr5tvC_9FAkmLU3fs5Y2FiLonbwEIRvA_T7gPmGALZyHshaphIoKdzYkz3_x8W_c-0ZulDWD8nSbv1ZiYKr4EjR36AMnbOUfSPNbwkOZs3V1k16Qp0j5q5hjEK3wXvLZ9FOHnwqrGNa2oTpbpulfkP9m-oOQHB7TamZwUTesxQiZvMZ6Ny7MkfIgxNPZhmxA66PzodxTO5009KQM"/>
+</div>
+<div class="text-center">
+<h3 class="font-body-lg text-body-lg mb-1">Crimson Heirloom</h3>
+<p class="font-body-md text-body-md text-secondary">₹ 52,000</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-6 relative">
+<img alt="Noir Bangles Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist arrangement of luxury metallic bangles resting on a soft silk fabric. The lighting is crisp and modern, creating a quiet luxury aesthetic perfect for high-net-worth audiences." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBASyluB9S61hTQQh6dRBdaK7w_yIGxlCrm47hExjkxPIbU5_fQngqRedffysOjh4EJ6ZPeNgygSqI2DVf-6nJEgpTq8VAfFJOt6wmDyAHIL1q6H7ud0QHnTvgyQHzm4DetKJAP7wpq2I3GUCFfBp2yx3ygzC70D5E20Xuyq17AwVqYIUjY9CgXgmIPKkJCd01hw5E0xCXaY_cPJ8KUkORnrqQq-g9EaJI4NMGJ32CsjDR-KEUWTTtkuU-vWVUJn45JFEAMHyVK5T8"/>
+</div>
+<div class="text-center">
+<h3 class="font-body-lg text-body-lg mb-1">Noir Bangles Set</h3>
+<p class="font-body-md text-body-md text-secondary">₹ 12,000</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-section-gap bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface font-body-md text-body-md border-t border-on-primary-fixed-variant flat no shadows">
+<div class="grid grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto md:px-margin-tablet sm:px-margin-mobile">
+<div class="col-span-12 md:col-span-6 lg:col-span-4 mb-12 md:mb-0">
+<div class="font-display-md text-display-md text-surface mb-6 tracking-tighter">ELYRÈNE</div>
+<p class="text-on-primary-container max-w-sm">
+                    Defining quiet luxury through exceptional craftsmanship and timeless design.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-8 flex flex-col md:flex-row justify-between lg:justify-end gap-12 lg:gap-24">
+<nav class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-surface mb-2">Explore</h4>
+<a class="text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Brand Story</a>
+<a class="text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Craftsmanship</a>
+</nav>
+<nav class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-surface mb-2">Support</h4>
+<a class="text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Shipping</a>
+<a class="text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Sustainability</a>
+<a class="text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</nav>
+</div>
+<div class="col-span-12 mt-24 pt-8 border-t border-on-primary-fixed-variant flex flex-col md:flex-row justify-between items-center text-on-primary-container text-sm">
+<span>© 2024 Elyrène. All rights reserved.</span>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-secondary transition-colors" href="#">Privacy</a>
+<a class="hover:text-secondary transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple accordion logic for demonstration
+        document.querySelectorAll('button.group').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.material-symbols-outlined');
+                
+                if (content && content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.textContent = 'remove';
+                    icon.classList.add('rotate-180');
+                } else if (content) {
+                    content.classList.add('hidden');
+                    icon.textContent = 'add';
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        });
+    </script>
+</body></html>

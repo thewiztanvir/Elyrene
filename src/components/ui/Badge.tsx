@@ -1,52 +1,30 @@
-import React from 'react'
+import * as React from 'react';
+import { cn } from '@/lib/utils';
 
-// ─────────────────────────────────────────────
-//  Types
-// ─────────────────────────────────────────────
-type BadgeVariant = 'gold' | 'success' | 'warning' | 'error' | 'muted'
-
-export interface BadgeProps {
-  variant?   : BadgeVariant
-  children   : React.ReactNode
-  className? : string
-  /** Optional leading icon (material symbol name string) */
-  icon?      : string
+interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
+  variant?: 'gold' | 'success' | 'warning' | 'error' | 'muted';
 }
 
-// ─────────────────────────────────────────────
-//  Variant map
-// ─────────────────────────────────────────────
-const variantClass: Record<BadgeVariant, string> = {
-  gold    : 'badge-gold',
-  success : 'badge-success',
-  warning : 'badge-warning',
-  error   : 'badge-error',
-  muted   : 'badge-muted',
-}
+const variantClasses = {
+  gold: 'badge-gold',
+  success: 'badge-success',
+  warning: 'badge-warning',
+  error: 'badge-error',
+  muted: 'badge-muted',
+};
 
-// ─────────────────────────────────────────────
-//  Badge component
-// ─────────────────────────────────────────────
-export default function Badge({
-  variant   = 'muted',
+export const Badge: React.FC<BadgeProps> = ({
+  className,
+  variant = 'muted',
   children,
-  className = '',
-  icon,
-}: BadgeProps) {
+  ...props
+}) => {
   return (
     <span
-      className={[variantClass[variant], className].filter(Boolean).join(' ')}
-      role="status"
+      className={cn('badge', variantClasses[variant], className)}
+      {...props}
     >
-      {icon && (
-        <span
-          className="material-symbols-outlined !text-[12px] leading-none"
-          aria-hidden="true"
-        >
-          {icon}
-        </span>
-      )}
       {children}
     </span>
-  )
-}
+  );
+};
